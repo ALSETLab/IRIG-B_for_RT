@@ -2,11 +2,17 @@
 IRIG-B Signal Generator Code in Matlab/Simulink for use with Real-Time Simulators.
 ![fig](./02_pics/irigb.jpg)
 
+--------------------------------------------------------------------------------
+
 ## Aim
 With the aim of assessing the impact of time-synchronization signals on synchrophasor applications, it is necessary to control a PMU's timing signal.
-This can be achieved by generating both three-phase and timing signals in real-time and then feed it to the PMU.
+This can be achieved by generating both three-phase and timing signals in real-time and then feed it to the PMU. See an example on how this can be achieved in [Paper3] below.
 
 The IRIG-B code generator in this repository serves this aim. Basic control blocks from SIMULINK’s library can be used to vary the accuracy of the time signal supplied. An Inter-Range Instrumentation Group Code B (IRIG-B) time signal is used here as a high accuracy PMU timing source. It distributes time to PMUs with an accuracy of ±500ns and can be simulated and controlled using SIMULINK. The PMU under test also requires balanced three-phase voltage and current signals as inputs. Both signals required, i.e. IRIG- B timing signal and the three-phase voltage and current (V and I) signals, can be simulated in SIMULINK. These signals can be sent in real-time as inputs to the PMU. The structure of IRIG-B time code which was simulated in real-time for PMU time synchronization is provided in the following source code.
+
+# Documentation
+Three conference papers documenting the development of this code and it's applications are available in the ``./01_docs`` sub-folder.
+See below on how to cite our work in case you use our code.
 
 # Source Code
 * irig_only.mdl
@@ -38,12 +44,9 @@ The voltage and current signals can also be delayed by using the transmission de
 # Cite our work!
 Please cite any of the following three papers depending on the use of our code.
 Pre-prints of the papers listed below are available in the ``./01_docs`` sub-folder.
-
-> M. S. Almas; L. Vanfretti; R. S. Singh; G. M. Jonsdottir, "Vulnerability of Synchrophasor-based WAMPAC Applications’ to Time Synchronization Spoofing," in IEEE Transactions on Smart Grid. doi: 10.1109/TSG.2017.2665461
-
-> R. S. Singh, H. Hooshyar and L. Vanfretti, "Laboratory test set-up for the assessment of PMU time synchronization requirements," 2015 IEEE Eindhoven PowerTech, Eindhoven, 2015, pp. 1-5. doi: 10.1109/PTC.2015.7232731
-
-> R. S. Singh, H. Hooshyar and L. Vanfretti, "Assessment of time synchronization requirements for Phasor Measurement Units," 2015 IEEE Eindhoven PowerTech, Eindhoven, 2015, pp. 1-6. doi: 10.1109/PTC.2015.7232728
+  - [Paper3] M. S. Almas; L. Vanfretti; R. S. Singh; G. M. Jonsdottir, "Vulnerability of Synchrophasor-based WAMPAC Applications’ to Time Synchronization Spoofing," in IEEE Transactions on Smart Grid. doi: 10.1109/TSG.2017.2665461
+  - [Paper2] R. S. Singh, H. Hooshyar and L. Vanfretti, "Laboratory test set-up for the assessment of PMU time synchronization requirements," 2015 IEEE Eindhoven PowerTech, Eindhoven, 2015, pp. 1-5. doi: 10.1109/PTC.2015.7232731
+  - [Paper3] R. S. Singh, H. Hooshyar and L. Vanfretti, "Assessment of time synchronization requirements for Phasor Measurement Units," 2015 IEEE Eindhoven PowerTech, Eindhoven, 2015, pp. 1-6. doi: 10.1109/PTC.2015.7232728
 
 # Contributors
 - Ravi Singh ([ravi2024](https://github.com/ravi2024))
